@@ -4,16 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js"
+    "test": "mocha server/**/*.test.js",
+    "start": "node server/server.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
-  "engines":{
-    "node":"7.2.1"
+  "engines": {
+    "node": "7.2.1"
   },
   "author": "Sebastian Vicente",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
     "socket.io": "^1.7.2"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
   }
 }
